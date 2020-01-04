@@ -1,3 +1,10 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# File              : utils.py
+# Author            : JCHRYS <jchrys@me.com>
+# Date              : 04.01.2020
+# Last Modified Date: 04.01.2020
+# Last Modified By  : JCHRYS <jchrys@me.com>
 import re
 import requests
 from bs4 import BeautifulSoup
@@ -17,15 +24,17 @@ def get_drop_html_tag_but(tag):
 
 
 
-def get_detail(item: dict, url, keys_to_update) -> None:
+def get_html_content_by_id(url, ids=[]) -> dict:
+    if not isinstance(ids, list):
+        raise Exception("not a list")
     res = requests.get(url)
     soup = BeautifulSoup(res.content, 'html.parser')
-    return soup
+    return { id: soup.find(id=id) for id in ids }
 
 if __name__ == '__main__':
     print(drop_html_tag_all("<strong> Hello World!</strong>"))
     br_cleaner = get_drop_html_tag_but('all')
     print(br_cleaner("<br>GOOODDADSAD<br>>"))
-    get_detail_test_url = 'http://book.naver.com/bookdb/book_detail.php?bid=15433261'
-    print(get_detail(1, get_detail_test_url, 1))
-     
+    detail_url = 'http://book.naver.com/bookdb/book_detail.php?bid=15433261'
+    print(get_html_content_by_id(detail_url, 
+        ['authorIntroContent', 'bookIntroContent', 'tableOfContentsContent']))
