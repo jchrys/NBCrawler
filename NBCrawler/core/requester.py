@@ -1,3 +1,10 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# File              : requester.py
+# Author            : JCHRYS <jchrys@me.com>
+# Date              : 04.01.2020
+# Last Modified Date: 04.01.2020
+# Last Modified By  : JCHRYS <jchrys@me.com>
 import requests
 
 class Singletone():
@@ -24,6 +31,7 @@ class BaseClass():
     
     def search(self, string):
         if string is None or string == '':
+            raise Exception("keyword is empty")
             return None # ERROR NO SEARCH TEXT
         context = {
                 "query": string
