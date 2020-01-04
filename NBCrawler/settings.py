@@ -1,6 +1,17 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# File              : settings.py
+# Author            : JCHRYS <jchrys@me.com>
+# Date              : 04.01.2020
+# Last Modified Date: 04.01.2020
+# Last Modified By  : JCHRYS <jchrys@me.com>
 #################################
 ##### NAVER BOOK API PARSER #####
 #################################
+import os
+
+# Ouput Folder
+path_to_output = os.path.join(os.getcwd(), 'nb')
 
 
 # API_URLS
