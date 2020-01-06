@@ -52,4 +52,5 @@ def main():
         json.dump(res_json, file, ensure_ascii=False, indent=4)
 
 if __name__ == '__main__':
+    print('hi')
     main()
