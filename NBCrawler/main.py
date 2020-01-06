@@ -38,6 +38,5 @@ for item in tqdm(items):
         item['isbn10'] = isbn10
         item['isbn13'] = isbn13
 
-
 with open(os.path.join(settings.path_to_output, output_filename + '.json'), 'w', encoding='utf8') as file:
     json.dump(items, file, ensure_ascii=False, indent=4)

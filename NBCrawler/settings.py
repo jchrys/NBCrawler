@@ -21,8 +21,6 @@ default_url = "https://openapi.naver.com/v1/search/book.json"
 client_id = 'dnDZOXWtoDfDYS0zPt10'
 client_secret = 'fYGT4Tfb8C'
 
-
-
 default_headers = {
     "X-Naver-Client-Id": client_id,
     "X-Naver-Client-Secret": client_secret,
@@ -38,4 +36,3 @@ default_params = {
     "start": page_num,
     #sort: "sim",
 }
-
