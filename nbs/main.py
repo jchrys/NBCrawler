@@ -45,7 +45,7 @@ def main():
                 item['isbn10'] = isbn10
                 item['isbn13'] = isbn13
             if toc in item and item[toc]:
-                item[toc] = item[toc].replace('\r', '\n\t')
+                item[toc] = item[toc].replace('\r', '\n')
         res_json.extend(items)
 
     with open(os.path.join(settings.path_to_output, output_filename + '.json'), 'w', encoding='utf8') as file:

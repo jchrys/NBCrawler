@@ -12,7 +12,7 @@ with open("README.md", "r") as fh:
 
 setup(
         name="nbs", 
-        version="0.0.8", 
+        version="0.0.9", 
         packages= find_packages(),
         description="Book information crawler using 'NAVER BOOKS API'",
         author="JCHRYS",
