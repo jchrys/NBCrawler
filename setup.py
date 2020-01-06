@@ -12,9 +12,9 @@ with open("README.md", "r") as fh:
 
 
 setup(
-        name="NBCrawler", 
+        name="nbs", 
         version="0.0.1", 
-        packges= find_packages(),
+        packages= find_packages(),
         description="Book information crawler using 'NAVER BOOKS API'",
         author="JCHRYS",
         author_email="jchrys@me.com",
@@ -25,8 +25,8 @@ setup(
             "tqdm",
             ],
         python_requires='>=3.6',
-        classfiers=[
+        classifiers=[
             "Programming Language :: Python :: 3",
-            "License :: OSI Approved:: MIT License",
+            "License :: OSI Approved :: MIT License",
             ]
         )

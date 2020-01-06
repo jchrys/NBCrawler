@@ -11,8 +11,8 @@ import time
 import json
 import os
 from tqdm import tqdm
-from NBCrawler.core import utils
-from NBCrawler.core.requester import Request
+from nbs.core import utils
+from nbs.core.requester import Request
 
 from pprint import pprint
 
