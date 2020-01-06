@@ -3,7 +3,7 @@
 # File              : settings.py
 # Author            : JCHRYS <jchrys@me.com>
 # Date              : 04.01.2020
-# Last Modified Date: 04.01.2020
+# Last Modified Date: 06.01.2020
 # Last Modified By  : JCHRYS <jchrys@me.com>
 #################################
 ##### NAVER BOOK API PARSER #####
@@ -26,7 +26,7 @@ default_headers = {
     "X-Naver-Client-Secret": client_secret,
 }
 
-query : str = ""
+query: str = ""
 item_per_page : int = 100
 page_num : int = 1
 
