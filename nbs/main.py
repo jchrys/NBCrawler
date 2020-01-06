@@ -33,6 +33,7 @@ def main():
         res = request.search(keyword).json()
         detail_ids = ['authorIntroContent', 'bookIntroContent', 'tableOfContentsContent']
         items = res['items']
+        toc = 'tableOfContentsContent'
 
         for item in tqdm(items, desc=keyword, leave=False, ncols=80):
             detail_dict = utils.get_html_content_by_id(item['link'], detail_ids)
@@ -43,7 +44,12 @@ def main():
                 isbn10, isbn13 = item['isbn'].split()
                 item['isbn10'] = isbn10
                 item['isbn13'] = isbn13
+            if toc in item and item[toc]:
+                item[toc] = item[toc].replace('\r', '\n\t')
         res_json.extend(items)
 
     with open(os.path.join(settings.path_to_output, output_filename + '.json'), 'w', encoding='utf8') as file:
         json.dump(res_json, file, ensure_ascii=False, indent=4)
+
+if __name__ == '__main__':
+    main()
