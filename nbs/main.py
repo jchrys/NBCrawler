@@ -5,7 +5,7 @@
 # Date              : 04.01.2020
 # Last Modified Date: 06.01.2020
 # Last Modified By  : JCHRYS <jchrys@me.com>
-import settings
+import .settings
 import platform
 import time
 import json
