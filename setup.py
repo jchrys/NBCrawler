@@ -10,10 +10,9 @@ from setuptools import setup, find_packages
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
-
 setup(
         name="nbs", 
-        version="0.0.1", 
+        version="0.0.5", 
         packages= find_packages(),
         description="Book information crawler using 'NAVER BOOKS API'",
         author="JCHRYS",
@@ -28,5 +27,11 @@ setup(
         classifiers=[
             "Programming Language :: Python :: 3",
             "License :: OSI Approved :: MIT License",
-            ]
+            ],
+        entry_points= {
+            'console_scripts': [
+                'nbs = nbs.main:main',
+                ]
+            }
+
         )

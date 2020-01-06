@@ -11,7 +11,7 @@
 import os
 
 # Ouput Folder
-path_to_output = os.path.join(os.getcwd(), 'nb')
+path_to_output = os.path.join(os.getcwd())
 
 
 # API_URLS
